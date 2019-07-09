@@ -1,0 +1,28 @@
+﻿<Window x:Class="MyNeuronNetworkWin.MainWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="NeuronNetworkIcon.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyNeuronNetworkWin"
+        mc:Ignorable="d"
+        Title="Нейронная сеть" Height="470" Width="800">
+    <Grid>
+        <Label Content="Нейронная сеть" HorizontalAlignment="Left" Margin="273,0,0,0" VerticalAlignment="Top" FontSize="36" ToolTip="Рекомендуется при добавлении нового актёра в нейросеть перезапускать программу"/>
+        <Label Content="Список актеров" ToolTip="Актеры уже существующие в нейросети" HorizontalAlignment="Left" Margin="87,73,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ListBox Name="actors_ListBox" BorderBrush="Black" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="278" Margin="58,107,568,0" VerticalAlignment="Top" Width="166" FontSize="14" SelectionChanged="Actors_ListBox_SelectionChanged"/>
+        <Button Content="x" HorizontalAlignment="Left" Margin="206,390,0,0" VerticalAlignment="Top" Width="18" Click="Button_Click" Cursor="Hand"/>
+        <TextBox Name="link_TextBox" IsReadOnly="True" BorderBrush="Black" HorizontalAlignment="Left" Margin="239,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" FontSize="14" Height="25" ></TextBox>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="278" Margin="58,107,0,0" VerticalAlignment="Top" Width="166"/>
+        <Label Content="?" Cursor="Help" FontSize="10" Foreground="#FF0060FF" Height="28" HorizontalAlignment="Left" Margin="738,162,0,0" x:Name="label_question1" ToolTip="Изображение должно быть не больше разрешения 750x750" VerticalAlignment="Top" />
+        <Label Content="Вставьте ссылку на изображение:" HorizontalAlignment="Left" Margin="379,151,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="ОК"  ToolTip="Нажмите ОК, чтобы нейросеть попробовала угадать актера по изображению" HorizontalAlignment="Left" Margin="450,350,0,0" VerticalAlignment="Top" Width="89" Height="27" Cursor="Hand" Click="Button_Click_1 " IsDefault="True"/>
+        <Button Content="Вставить ссылку" Name="PasteLink" HorizontalAlignment="Left" Margin="433,213,0,0" VerticalAlignment="Top" Width="113" Click="PasteLink_Click" Cursor="Hand"/>
+        <TextBox Name="name_TextBox" ToolTip="Пример: Джонни Депп" BorderBrush="Black" HorizontalAlignment="Left" Height="23" Margin="377,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" VerticalContentAlignment="Center" FontSize="14"/>
+        <Label Content="Введите имя и фамилию" ToolTip="Подсказка для нейросети. Если не уверены в правильности написания сверяйтесь с сайтом Кинопоиск" HorizontalAlignment="Left" Margin="405,259,0,0" VerticalAlignment="Top" FontSize="14" />
+        <CheckBox Name="name_CheckBox" HorizontalAlignment="Left" Margin="598,296,0,0" VerticalAlignment="Top" IsChecked="False" Checked="Name_CheckBox_Checked" Unchecked="Name_CheckBox_Unchecked"/>
+        <Label Content="?" Cursor="Help" FontSize="10" Foreground="#FF0060FF" Height="28" HorizontalAlignment="Left" Margin="613,282,0,0" x:Name="label_question2" ToolTip="Это поле нужно включить для обучения нейросети" VerticalAlignment="Top" />
+        <Label Content="max = 10" HorizontalAlignment="Left" Margin="55,383,0,0" VerticalAlignment="Top" Height="28" Width="63" FontSize="10" Foreground="#FFD8D8D8"/>
+    </Grid>
+</Window>
